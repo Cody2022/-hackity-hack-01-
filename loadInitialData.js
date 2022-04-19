@@ -20,21 +20,21 @@ const pizzaData = [
     price: 12,
   },
   {
-    name: "Veggie",
+    name: "Veggie2",
     toppings: ["olives", "mushrooms", "onions", "cheese"],
     price: 8,
   },
 ];
 
 // import models
-const Pizza = require("../models/pizza");
+const Pizza = require("./models/pizza");
 
 // load data
 const loadInitialData = async () => {
   // load pizzas
   for (let pizza of pizzaData) {
-    await Pizza.create = pizza;
-    console.log(Pizza)
+    await Pizza.create(pizza);
+    console.log(pizza)
   }
   console.log("Pizzas loaded");
 };
